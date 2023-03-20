@@ -14,6 +14,13 @@ Offline Affirmations App made with Jetpack Compose.
 - Affirmations sorted by categories
 - Multi-languages (Not really)
 
+## Technologies
+
+- Jetpack Compose
+- Room
+- Pager Compose
+- Hilt/Dagger2
+
 ## Screenshots
 
 <p float="left">
