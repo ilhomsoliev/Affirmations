@@ -22,17 +22,15 @@ const val messageExtra = "messageExtra"
 
 class Notification : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
-        //val taskInfo = intent?.getSerializableExtra("task_info") as? TaskInfo
-        // tapResultIntent gets executed when user taps the notification
         val tapResultIntent = Intent(context, MainActivity::class.java)
         tapResultIntent.flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
         val pendingIntent: PendingIntent =
             getActivity(context, 0, tapResultIntent, FLAG_UPDATE_CURRENT or FLAG_IMMUTABLE)
 
         val notification = NotificationCompat.Builder(context, channelID)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
-            .setContentTitle(intent.getStringExtra(titleExtra))
-            .setContentText(intent.getStringExtra(messageExtra))
+            .setSmallIcon(R.drawable.baseline_tag_faces_24)
+            .setContentTitle(intent.getStringExtra(messageExtra))
+            .setStyle(NotificationCompat.BigTextStyle().bigText(intent.getStringExtra(titleExtra)))
             .setContentIntent(pendingIntent)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .build()

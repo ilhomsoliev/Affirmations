@@ -19,7 +19,7 @@ fun LanguagesScreen(
     onEvent: (LanguagesEvent) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxSize()) {
-        CustomTopAppBar(text = "Favorites", onIconClick = {
+        CustomTopAppBar(text = "Languages", onIconClick = {
             onEvent(LanguagesEvent.OnBackClick)
         })
         if (state.selectedLanguage != null) {
