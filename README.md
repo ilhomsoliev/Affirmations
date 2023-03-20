@@ -20,6 +20,11 @@ Offline Affirmations App made with Jetpack Compose.
 - Room
 - Pager Compose
 - Hilt/Dagger2
+## Contributing
+
+Contributions are always welcome!
+
+See [CONTRIBUTING.md](/CONTRIBUTING.md) for ways to get started.
 
 ## Screenshots
 
